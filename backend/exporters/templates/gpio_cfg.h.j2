@@ -1,0 +1,13 @@
+/**
+ * @file gpio_cfg.h
+ * @brief BIOS GPIO Configuration Header
+ */
+
+#ifndef _GPIO_CFG_H_
+#define _GPIO_CFG_H_
+
+{% for pin, value in gpio_settings.items() %}
+#define GPIO_PIN_{{ pin | upper }}    {{ value }}
+{% endfor %}
+
+#endif
